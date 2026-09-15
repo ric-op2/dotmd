@@ -10,7 +10,7 @@
 
 **[DOTMD-v0.60.zipをダウンロード](https://github.com/ric-op2/dotmd/releases/download/v0.60/DOTMD-v0.60.zip)** して展開してください。ゲーム本体 `DOTMD-v0.60-6SONGS.fds` と、取扱説明書、印刷用データ、起動・保存の補足、利用条件が入っています。
 
-**[取扱説明書 PDF](docs/DOTMD-Booklet-88mm.pdf)** · [A4両面印刷用 PDF](docs/DOTMD-Booklet-A4-Duplex.pdf) · [起動と保存](docs/PLAYING.md) · [動作確認と制限](docs/COMPATIBILITY.md)
+**[取扱説明書 PDF](docs/DOTMD-Booklet-88mm.pdf)** · [A4両面印刷用 PDF](docs/DOTMD-Booklet-A4-Duplex.pdf) · [起動と保存](docs/PLAYING.md) · [仕様と制限](docs/COMPATIBILITY.md)
 
 FDS対応エミュレーターなどの実行環境が別途必要です。エミュレーターとディスクシステムBIOSは同梱していません。FDSファイルを対応エミュレーターで開いてください。
 
@@ -45,10 +45,6 @@ FDS対応エミュレーターなどの実行環境が別途必要です。エ�
 ## v0.60の変更
 
 キューブ取得時に小さな光を追加しました。JUSTでは大きく長く光ります。タイトル文字にも短い明るさの揺らぎを追加しました。[更新履歴](CHANGELOG.md)
-
-## 動作確認
-
-v0.60はFCEUmmで全6曲のEASY／HARD完走、ハイスコアの保存・非保存、リセット後の記録復元を確認しています。実機およびFDSKEYでのプレイ・保存は未確認です。[確認範囲の詳細](docs/COMPATIBILITY.md)
 
 ## 利用条件
 
