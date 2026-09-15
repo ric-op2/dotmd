@@ -1,0 +1,22 @@
+# This repository contains only the explicitly listed public files.
+*
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE.txt
+!CREDITS.md
+!CHANGELOG.md
+!THIRD-PARTY-NOTICES.txt
+!docs/
+!docs/DOTMD-Booklet-88mm.pdf
+!docs/DOTMD-Booklet-A4-Duplex.pdf
+!docs/PRINTING.txt
+!docs/PLAYING.md
+!docs/COMPATIBILITY.md
+!images/
+!images/title.png
+!images/gameplay.png
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/bug_report.yml
+!.github/ISSUE_TEMPLATE/config.yml
