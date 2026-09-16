@@ -1,0 +1,51 @@
+Third-party notices for (dot)md
+
+以下は、ゲーム内で使用している第三者コードの権利表示です。
+これらのコードには各々の利用条件が適用されます。
+(dot)md独自部分の利用条件はLICENSE.txtを参照してください。
+
+1. FamiStudio Sound Engine
+https://famistudio.org/doc/soundengine/
+Source: FamiStudio 4.5.3 distribution, famistudio_ca65.s (header: 4.5.0)
+Based on FamiTone2 by Shiru.
+
+FAMISTUDIO SOUND ENGINE (4.5.0)
+Copyright (c) 2019-2026 Mathieu Gauthier
+
+Copying and distribution of this file, with or without
+modification, are permitted in any medium without royalty provided
+the copyright notice and this notice are preserved in all source
+code copies. This file is offered as-is, without any warranty.
+
+2. cc65 runtime
+https://github.com/cc65/cc65
+License source: https://github.com/cc65/cc65/blob/master/LICENSE
+
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising from
+the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+claim that you wrote the original software. If you use this software in
+a product, an acknowledgment in the product documentation would be
+appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not
+be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+
+3. NES-ca65-example, FDS branch
+https://github.com/bbbradsmith/NES-ca65-example/tree/fds
+The startup code was adapted for (dot)md.
+
+This program and source code can be freely redistributed, modified or reused in any way.
+Credit is not required, but attribution is always appreciated.
+
+Brad Smith
+
+http://rainwarrior.ca

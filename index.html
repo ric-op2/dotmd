@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c0c13">
+  <meta name="description" content="音楽に乗って、夜を走る。(dot)mdをブラウザでプレイ。全6曲、EASY／HARD、タイミング調整に対応。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>(dot)md — ブラウザでプレイ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="heading">
+    <div><div class="eyebrow">NinAIdo <span>WEB DEMO</span></div><h1>(dot)md<span class="version">v0.60</span></h1><p>音楽に乗って、夜を走る。</p></div>
+    <a class="download" href="https://github.com/ric-op2/dotmd/releases/tag/v0.60" target="_blank" rel="noopener">FDS版をダウンロード <span aria-hidden="true">↗</span></a>
+  </header>
+  <section class="player" aria-label="ゲーム">
+    <div class="screen" id="screen">
+      <canvas id="game" width="256" height="224" tabindex="0" aria-label="ドット・エムディーのゲーム画面"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-inner"><span class="ready-mark" aria-hidden="true">✦</span><h2 id="overlay-title">READY TO DRIVE</h2><p id="overlay-text">キューブを集めて、コーナーを曲がろう。</p><button class="primary" id="play">プレイする <span aria-hidden="true">▶</span></button><small id="loading-note">音が出ます。音量を調整してお楽しみください。</small></div>
+      </div>
+    </div>
+    <div class="toolbar"><span class="status" id="status" role="status">ブラウザ版</span><div><button id="timing-open">タイミング 0ms</button><button id="pause" disabled aria-label="一時停止">一時停止</button><button id="sound" aria-pressed="false">音 ON</button><button id="fullscreen">全画面</button></div></div>
+    <div class="controls" aria-label="タッチ操作">
+      <div class="direction"><button data-pad="up" class="up" aria-label="上段へ移動">↑</button><button data-pad="left" class="left" aria-label="左車線へ移動">←</button><button data-pad="right" class="right" aria-label="右車線へ移動">→</button></div>
+      <div class="system"><button data-pad="select">SELECT<small>難易度</small></button><button data-pad="start">START<small>開始・決定</small></button></div>
+      <div class="turn"><button data-pad="b"><strong>B</strong><small>左コーナー</small></button><button data-pad="a"><strong>A</strong><small>右コーナー</small></button></div>
+    </div>
+  </section>
+  <section class="instructions" aria-label="遊びかた">
+    <div><h2>01 <span>キューブを集める</span></h2><p><kbd>←</kbd> <kbd>→</kbd> で車線移動。<kbd>↑</kbd> を押している間は上段へ。位置を合わせるだけでも取得できます。</p></div>
+    <div><h2>02 <span>コーナーを曲がる</span></h2><p>左は <kbd>Z</kbd>、右は <kbd>X</kbd>。ゲージを残して曲の最後まで走ればCLEAR。</p></div>
+    <div><h2>03 <span>曲を選ぶ</span></h2><p><kbd>Enter</kbd> でSTART。曲選択では <kbd>←</kbd> <kbd>→</kbd> で曲、<kbd>Shift</kbd> で難易度を変更できます。</p></div>
+  </section>
+  <p class="save-note">キーボード・画面のボタン・ゲームパッドで操作できます。ハイスコアはゲーム内で保存を選ぶと、このブラウザに残ります。</p>
+  <footer><span>© NinAIdo 2026</span><nav><a href="licenses/GAME.txt">ゲームの利用条件</a><a href="NOTICE.md">使用ソフトウェア</a></nav></footer>
+</main>
+<dialog id="timing-dialog" aria-labelledby="timing-heading">
+  <div class="timing-head"><div><span class="eyebrow">TIMING SETUP</span><h2 id="timing-heading">タイミング調整</h2></div><button id="timing-close" aria-label="閉じる">×</button></div>
+  <p class="timing-help">いつもの画面・音声機器で、押しやすいタイミングに合わせます。ゲームは一時停止しています。</p>
+  <section class="manual-timing" aria-label="手動調整">
+    <div class="offset-controls"><button id="timing-minus" aria-label="判定を1フレーム早める">−</button><div><output id="timing-value" for="timing-offset">0ms</output><p id="timing-direction">補正なし</p></div><button id="timing-plus" aria-label="判定を1フレーム遅らせる">＋</button></div>
+    <input id="timing-offset" type="range" min="-12" max="12" step="1" value="0" aria-label="判定タイミングの補正（フレーム）">
+    <div class="range-labels"><span>早くする　約−200ms</span><span>遅くする　約＋200ms</span></div>
+    <p class="timing-help">＋は遅めの入力に、−は早めの入力に合わせます。約17msずつ調整でき、判定の広さは変わりません。</p>
+    <button id="timing-zero" class="text-button">0に戻す</button>
+  </section>
+  <section class="calibration" aria-label="リズムに合わせて測定">
+    <h3>リズムに合わせて測る</h3>
+    <div class="calibrate-modes"><label><input type="radio" name="calibrate-mode" value="audio" checked>音に合わせる</label><label><input type="radio" name="calibrate-mode" value="visual">光に合わせる</label></div>
+    <p class="timing-help">音を頼りに遊ぶなら「音」、画面を見て合わせるなら「光」を選びます。測定値は押し方も含めた目安です。</p>
+    <div class="calibration-display"><div id="calibrate-orb" aria-hidden="true"></div><span id="calibrate-count">12 TAPS</span></div>
+    <p id="calibrate-message" aria-live="polite">4拍の予告のあと、リズムに合わせて12回押してください。</p>
+    <div class="calibrate-buttons"><button id="calibrate-start">測定を始める</button><button id="calibrate-stop" hidden>中止</button><button id="calibrate-tap" disabled>ここをタップ / SPACE</button></div>
+    <p id="calibrate-result" aria-live="polite"></p>
+  </section>
+  <button id="timing-apply" class="primary">この設定を使う</button>
+  <p class="timing-foot">設定はこのブラウザに保存されます。モニターやイヤホンを変えたときは、もう一度調整してください。</p>
+</dialog>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

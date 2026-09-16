@@ -1,0 +1,9 @@
+FCEUmm JavaScript glue change for this prototype:
+
+Original (romdev-core-fceumm 0.13.0):
+var ENVIRONMENT_IS_NODE=true;
+
+Changed to:
+var ENVIRONMENT_IS_NODE=typeof process==="object"&&!!process.versions?.node;
+
+The WebAssembly binary is unchanged. The app passes fetched wasmBinary bytes and supplies its independently authored DOTMD bridge as the system ROM. Node-only FS code is not executed in the browser.
