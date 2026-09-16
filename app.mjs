@@ -25,7 +25,7 @@ function audioFrame(){
   host.state.audioRing.length=0;
 }
 function input(){
-  const pad={};for(const k of heldKeys)if(keymap[k])pad[keymap[k]]=true;for(const p of touches.values())pad[p]=true;
+  const pad={};for(const k of heldKeys)if(keymap[k])pad[keymap[k]]=true;for(const p of touches.values())for(const key of p.split(' '))pad[key]=true;
   const gamepad=Array.from(navigator.getGamepads?.()||[]).find(p=>p&&p.mapping==='standard');
   if(gamepad){const b=i=>Boolean(gamepad.buttons[i]?.pressed);pad.left||=b(14)||gamepad.axes[0]<-.45;pad.right||=b(15)||gamepad.axes[0]>.45;pad.up||=b(12)||gamepad.axes[1]<-.45;pad.down||=b(13)||gamepad.axes[1]>.45;pad.a||=b(0);pad.b||=b(1);pad.start||=b(9);pad.select||=b(8);}
   return pad;

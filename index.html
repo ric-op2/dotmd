@@ -7,7 +7,7 @@
   <meta name="description" content="音楽に乗って、夜を走る。(dot)mdをブラウザでプレイ。全6曲、EASY／HARD、タイミング調整に対応。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>(dot)md — ブラウザでプレイ</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260916-touch5">
 </head>
 <body>
 <main class="app">
@@ -24,7 +24,7 @@
     </div>
     <div class="toolbar"><span class="status" id="status" role="status">ブラウザ版</span><div><button id="timing-open">タイミング 0ms</button><button id="pause" disabled aria-label="一時停止">一時停止</button><button id="sound" aria-pressed="false">音 ON</button><button id="fullscreen">全画面</button></div></div>
     <div class="controls" aria-label="タッチ操作">
-      <div class="direction"><button data-pad="up" class="up" aria-label="上段へ移動">↑</button><button data-pad="left" class="left" aria-label="左車線へ移動">←</button><button data-pad="right" class="right" aria-label="右車線へ移動">→</button></div>
+      <div class="direction"><button data-pad="up left" class="up-left" aria-label="左上へ移動">↖</button><button data-pad="up" class="up" aria-label="上段へ移動">↑</button><button data-pad="up right" class="up-right" aria-label="右上へ移動">↗</button><button data-pad="left" class="left" aria-label="左車線へ移動">←</button><button data-pad="right" class="right" aria-label="右車線へ移動">→</button></div>
       <div class="system"><button data-pad="select">SELECT<small>難易度</small></button><button data-pad="start">START<small>開始・決定</small></button></div>
       <div class="turn"><button data-pad="b"><strong>B</strong><small>左コーナー</small></button><button data-pad="a"><strong>A</strong><small>右コーナー</small></button></div>
     </div>
@@ -59,6 +59,6 @@
   <button id="timing-apply" class="primary">この設定を使う</button>
   <p class="timing-foot">設定はこのブラウザに保存されます。モニターやイヤホンを変えたときは、もう一度調整してください。</p>
 </dialog>
-<script type="module" src="app.mjs"></script>
+<script type="module" src="app.mjs?v=20260916-touch5"></script>
 </body>
 </html>
