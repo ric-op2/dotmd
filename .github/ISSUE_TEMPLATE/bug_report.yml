@@ -9,7 +9,7 @@ body:
     id: version
     attributes:
       label: ゲームの版
-      placeholder: "v0.60"
+      placeholder: "v0.61"
     validations:
       required: true
   - type: textarea

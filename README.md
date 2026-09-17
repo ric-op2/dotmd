@@ -2,9 +2,9 @@
 
 音楽に合わせてキューブを集め、コーナーを曲がる、1人用のドットイート・リズムドライブゲームです。ファミリーコンピュータ ディスクシステム向けのFDS形式で配布します。
 
-**v0.60 · 6曲収録 · EASY／HARD · RANDOM対応**
+**v0.61 · 6曲収録 · EASY／HARD · RANDOM対応**
 
-<img src="images/title.png" alt="v0.60 タイトル画面" width="384"> <img src="images/gameplay.png" alt="暗い紫を基調にしたOBSIDIAN DRIVE" width="384">
+<img src="images/title.png" alt="v0.61 タイトル画面" width="384"> <img src="images/gameplay.png" alt="暗い紫を基調にしたOBSIDIAN DRIVE" width="384">
 
 ## ダウンロード
 
@@ -14,7 +14,7 @@
 
 キーボード操作：**←／→**で車線移動、**↑**で上段、**Z**で左コーナー、**X**で右コーナー、**Enter**でSTART、**Shift**でSELECT。一時停止は画面下のボタンから行えます。
 
-**[DOTMD-v0.60.zipをダウンロード](https://github.com/ric-op2/dotmd/releases/download/v0.60/DOTMD-v0.60.zip)** して展開してください。ゲーム本体 `DOTMD-v0.60-6SONGS.fds` と、取扱説明書、印刷用データ、起動・保存の補足、利用条件が入っています。
+**[DOTMD-v0.61.zipをダウンロード](https://github.com/ric-op2/dotmd/releases/download/v0.61/DOTMD-v0.61.zip)** して展開してください。ゲーム本体 `DOTMD-v0.61-6SONGS.fds` と、取扱説明書、印刷用データ、起動・保存の補足、利用条件が入っています。
 
 **[取扱説明書 PDF](docs/DOTMD-Booklet-88mm.pdf)** · [A4両面印刷用 PDF](docs/DOTMD-Booklet-A4-Duplex.pdf) · [起動と保存](docs/PLAYING.md) · [仕様と制限](docs/COMPATIBILITY.md)
 
@@ -27,7 +27,8 @@ FDS対応エミュレーターなどの実行環境が別途必要です。エ�
 | 場面 | 操作 |
 |---|---|
 | タイトル | STARTで曲選択へ |
-| 曲選択 | 左右で曲、SELECTでEASY／HARD、AでRANDOM切替、STARTで開始 |
+| 曲選択 | 左右で曲、SELECTを離すとEASY／HARD切替、AでRANDOM切替、STARTで開始 |
+| タイミング調整 | 曲選択でSELECT＋START。左右で調整、Bで0、STARTで保存 |
 | プレイ中 | 左右で車線移動、上で上段へ、Bで左折、Aで右折 |
 | 結果・保存確認 | 左右で選び、AまたはSTARTで決定 |
 
@@ -48,9 +49,13 @@ FDS対応エミュレーターなどの実行環境が別途必要です。エ�
 
 88mm角、表紙・裏表紙を含めて12ページ（本文1〜10ページ）です。A4用紙1枚を両面印刷して作れます。印刷設定は **A4縦・長辺とじ・100%**。詳しくは[印刷と製本](docs/PRINTING.txt)をご覧ください。
 
-## v0.60の変更
+## v0.61の変更
 
-キューブ取得時に小さな光を追加しました。JUSTでは大きく長く光ります。タイトル文字にも短い明るさの揺らぎを追加しました。[更新履歴](CHANGELOG.md)
+FDS版の曲選択画面にタイミング調整を追加しました。SELECTを押しながらSTARTで「TIMING ADJUSTMENT」へ切り替わります。左右で−12〜12Fを調整し、STARTでディスクに保存。保存後は元の曲選択に戻り、次回起動時にも設定を引き継ぎます。
+
+[調整方法と保存手順](docs/TIMING.md) · [更新履歴](CHANGELOG.md)
+
+<img src="images/timing.png" alt="TIMING ADJUSTMENT画面" width="384"> <img src="images/saving.png" alt="SAVING表示" width="384">
 
 ## 利用条件
 

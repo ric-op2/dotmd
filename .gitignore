@@ -20,3 +20,6 @@
 !.github/ISSUE_TEMPLATE/
 !.github/ISSUE_TEMPLATE/bug_report.yml
 !.github/ISSUE_TEMPLATE/config.yml
+!docs/TIMING.md
+!images/timing.png
+!images/saving.png
