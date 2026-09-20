@@ -1,0 +1,48 @@
+{
+  "game": "(dot)md",
+  "url": "https://ric-op2.github.io/dotmd/",
+  "song": "NEON AFTERGLOW",
+  "difficulty": "HARD",
+  "model": "jev-1.13.0",
+  "result": "CLEAR",
+  "score": 48960,
+  "maxObservedChain": 118,
+  "emulatedSeconds": 121.48,
+  "requests": 118,
+  "positionDecisions": 109,
+  "cornerDecisions": 9,
+  "inputTokens": 78753,
+  "outputTokens": 7473,
+  "medianLatencyMs": 233,
+  "meanLatencyMs": 244,
+  "method": "Emulation pauses during Jev inference. Jev chooses lane/tier and A/B. A visible-sprite adapter and frame-level actuator apply those choices in empirically calibrated JUST windows (lower cube y=177, upper cube y=141). Corner presses align to a calibrated 60-frame beat phase after the visible warning, allowing different warning lead times. A one-frame move away is used when a fresh positional input is needed. Judgments are reconstructed from the most frequent settled HUD score for each chain and validated against point increments; partial digit writes are excluded. No score, gauge, chart, or judgment-window memory is modified. This is assisted frame-stepped play, not real-time model reflexes.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "CLEAR",
+      "scoreAtClear": 39900,
+      "judgments": {
+        "JUST": 117,
+        "GOOD": 0,
+        "MISS": 1
+      },
+      "limitation": "Fixed corner lead missed a shorter warning."
+    },
+    {
+      "attempt": 2,
+      "result": "CLEAR"
+    }
+  ],
+  "fullCombo": true,
+  "scoreAtClear": 40800,
+  "resultScreenBonus": 8160,
+  "judgments": {
+    "JUST": 118,
+    "GOOD": 0,
+    "MISS": 0
+  },
+  "cubeJudgments": 109,
+  "cornerJudgments": 9,
+  "allJust": true,
+  "previousHardScore": 16320
+}
