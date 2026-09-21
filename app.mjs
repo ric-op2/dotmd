@@ -1,6 +1,6 @@
 import {LibretroHost} from './vendor/host/LibretroHost.js';
 import factory from './vendor/fceumm/fceumm_libretro.js';
-import {DiskBridge} from './bridge.mjs';
+import {DiskBridge} from './bridge.mjs?v=062';
 import {TimingPanel,readTiming,TIMING_STORAGE_KEY,AUDIO_LEAD_SECONDS} from './timing.mjs';
 
 const $=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d',{alpha:false});
@@ -50,7 +50,7 @@ async function start(){
     if(!ready){
       $('play').textContent='読み込み中…';status('準備中');
       const bytes=async url=>{const res=await fetch(url);if(!res.ok)throw Error('Cannot load '+url);return new Uint8Array(await res.arrayBuffer());};
-      const [wasm,game,shim]=await Promise.all([bytes('./vendor/fceumm/fceumm_libretro.wasm'),bytes('./game.fds'),bytes('./dotmd-bridge.bin')]);
+      const [wasm,game,shim]=await Promise.all([bytes('./vendor/fceumm/fceumm_libretro.wasm'),bytes('./game.fds?v=062'),bytes('./dotmd-bridge.bin?v=062')]);
       await host.loadCore({factory,wasmBinary:wasm});
       await host.loadMedia({platform:'nes',bytes:game,name:'dotmd.fds',systemFiles:{'disksys.rom':shim}});
       let save=null;try{const s=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(Array.isArray(s)&&s.length===43&&s.every(x=>Number.isInteger(x)&&x>=0&&x<=255))save=Uint8Array.from(s);}catch{}

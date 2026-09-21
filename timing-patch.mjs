@@ -1,4 +1,4 @@
-// Generated from the v0.60 assembly. Offsets are in the first FDS PRG file.
-export const TIMING_PATCH=[[1727,32,76],[1728,183,0],[1729,154,230],[2294,32,76],[2295,183,0],[2296,154,231],[2596,40,0],[2597,106,229],[3736,10,232],[3738,11,233],[3837,10,232],[3839,11,233],[3928,10,232],[3930,11,233],[3970,10,232],[3972,11,233],[4007,10,232],[4009,11,233],[4032,10,232],[4034,11,233],[4054,10,232],[4056,11,233],[4084,10,232],[4088,11,233],[4137,10,232],[4139,11,233],[5346,111,0],[5347,110,228]];
+// v0.62 uses its native judgement clock; only the native settings chord is suppressed.
+export const TIMING_PATCH=[[5498,208,234],[5499,18,234],[5503,251,243]];
 export const TIMING_OFFSET=0xea;
 export const TIMING_LIMIT=12;

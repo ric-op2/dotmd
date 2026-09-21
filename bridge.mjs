@@ -1,5 +1,5 @@
-// DOTMD v0.60-only high-level disk service; no original BIOS is used.
-import {TIMING_PATCH,TIMING_OFFSET,TIMING_LIMIT} from './timing-patch.mjs';
+// DOTMD v0.62-only high-level disk service; no original BIOS is used.
+import {TIMING_PATCH,TIMING_OFFSET,TIMING_LIMIT} from './timing-patch.mjs?v=062';
 export function parseDisk(bytes) {
   if (String.fromCharCode(...bytes.slice(0,4)) !== 'FDS\x1a' || bytes[4] !== 1) throw Error('対応していないゲームデータです。');
   const files=[];
